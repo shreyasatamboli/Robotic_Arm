@@ -1,0 +1,74 @@
+{
+    "serial": {
+        "port": "/dev/ttyUSB0",
+        "baudrate": 9600,
+        "timeout": 2
+    },
+    "camera": {
+        "device_id": 0,
+        "width": 640,
+        "height": 480,
+        "fps": 30
+    },
+    "arm_parameters": {
+        "link_lengths": [100, 150, 150, 100, 50],
+        "joint_limits": {
+            "base": [0, 180],
+            "shoulder": [0, 180],
+            "elbow": [0, 180],
+            "wrist": [0, 180],
+            "gripper": [0, 180]
+        },
+        "workspace_limits": {
+            "x": [-300, 300],
+            "y": [-300, 300],
+            "z": [0, 400]
+        }
+    },
+    "vision": {
+        "camera_height": 400,
+        "pixels_per_mm": 2.0,
+        "min_object_area": 500,
+        "max_object_area": 50000,
+        "color_ranges": {
+            "red": {
+                "lower1": [0, 100, 100],
+                "upper1": [10, 255, 255],
+                "lower2": [160, 100, 100],
+                "upper2": [180, 255, 255]
+            },
+            "green": {
+                "lower": [40, 50, 50],
+                "upper": [80, 255, 255]
+            },
+            "blue": {
+                "lower": [90, 50, 50],
+                "upper": [130, 255, 255]
+            },
+            "yellow": {
+                "lower": [20, 100, 100],
+                "upper": [30, 255, 255]
+            }
+        }
+    },
+    "sorting_zones": {
+        "by_color": {
+            "red": [200, 100, 0],
+            "green": [200, -100, 0],
+            "blue": [-200, 100, 0],
+            "yellow": [-200, -100, 0]
+        },
+        "by_shape": {
+            "circle": [150, 150, 0],
+            "square": [150, -150, 0],
+            "triangle": [-150, 150, 0],
+            "rectangle": [-150, -150, 0]
+        }
+    },
+    "motion": {
+        "move_delay": 15,
+        "pickup_height_offset": 50,
+        "place_height_offset": 50,
+        "safe_height": 100
+    }
+}

@@ -1,0 +1,12 @@
+# Python Requirements for Robotic Arm Sorting System
+
+# Computer Vision
+opencv-python>=4.5.0
+numpy>=1.19.0
+
+# Serial Communication
+pyserial>=3.5
+
+# Optional: For enhanced features
+# scipy>=1.5.0
+# matplotlib>=3.3.0
